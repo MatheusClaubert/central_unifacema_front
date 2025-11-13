@@ -6,7 +6,7 @@ export const defaultApps: AppLink[] = [
   {
     id: "portal-academico",
     name: "Portal Acadêmico",
-    href: "https://portal.unifacema.edu.br",
+    href: "https://grupoeduca161993.rm.cloudtotvs.com.br/FrameHTML/Web/App/Edu/PortalEducacional/login/",
     description: "Acesso ao portal do aluno e professor",
     icon: "🎓",
     target: "_blank",
@@ -16,7 +16,7 @@ export const defaultApps: AppLink[] = [
   {
     id: "biblioteca",
     name: "Biblioteca",
-    href: "https://biblioteca.unifacema.edu.br",
+    href: "https://biblioteca.unifacema.edu.br/",
     description: "Catálogo e serviços da biblioteca",
     icon: "📚",
     target: "_blank",
@@ -26,22 +26,32 @@ export const defaultApps: AppLink[] = [
   {
     id: "suporte-ti",
     name: "Suporte TI",
-    href: "https://suporte.unifacema.edu.br",
+    href: "",
     description: "Abrir chamados e acompanhar solicitações",
     icon: "🛠️",
     target: "_blank",
     isDefault: true,
     tags: ["ti"],
   },
+  {
+    id: "Brightspace-UniFacema",
+    name: "Brightspace UniFacema",
+    href: "https://brightspace.unifacema.edu.br/",
+    description: "Ambiente virtual de aprendizagem",
+    icon: "📘",
+    target: "_blank",
+    isDefault: true,
+    tags: ["acadêmico"],
+  }
 ];
 
-// Apps por grupo/setor (exemplos). O backend substituirá por dados reais.
+// Apps por grupo/setor (exemplos). 
 export const groupApps: Record<string, AppLink[]> = {
   financeiro: [
     {
       id: "rm-fin-cp",
       name: "Contas a Pagar",
-      href: "https://rm.unifacema/financeiro/contas-a-pagar",
+      href: "http://192.168.0.208:8021/Login",
       description: "Gestão de títulos, pagamentos e fornecedores",
       icon: "💸",
       target: "_blank",
@@ -64,15 +74,6 @@ export const groupApps: Record<string, AppLink[]> = {
       href: "https://rm.unifacema/rh/ponto",
       description: "Espelho de ponto e ajustes",
       icon: "⏱️",
-      target: "_blank",
-      tags: ["rh", "rm"],
-    },
-    {
-      id: "rm-rh-holerite",
-      name: "Holerite",
-      href: "https://rm.unifacema/rh/holerite",
-      description: "Consulta de contracheques",
-      icon: "🧑‍💼",
       target: "_blank",
       tags: ["rh", "rm"],
     },

@@ -11,7 +11,7 @@ export type AppLink = {
   name: string;
   href: string;
   description?: string;
-  icon?: string; // emoji ou nome do ícone
+  icon?: string; // tu pode passar o emoji ou nome do ícone
   target?: "_blank" | "_self";
   tags?: string[];
   isDefault?: boolean;
