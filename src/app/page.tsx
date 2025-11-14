@@ -6,6 +6,8 @@ import { Search } from "@/components/search";
 import { UserMenu } from "@/components/user-menu";
 import { AppsGrid } from "@/components/apps-grid";
 import Link from "next/link";
+import { User as UserIcon } from "lucide-react";
+
 
 export default function Home() {
   const { user } = useAuth();
@@ -20,8 +22,9 @@ export default function Home() {
             {user ? (
               <UserMenu />
             ) : (
-              <Link href="/login" className="rounded-lg border px-3 py-1.5 text-sm hover:bg-muted/50">
-                Entrar
+              <Link href="/login" className="rounded-lg border-b-black px-3 py-1.5 text-sm hover:bg-muted/50 outline-">
+                <UserIcon className="h-4 w-4" />
+                Autenticar
               </Link>
             )}
           </div>
