@@ -3,7 +3,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import type { User } from "@/lib/auth";
 
-const AUTH_DISABLED = process.env.NEXT_PUBLIC_AUTH_DISABLED === "true";
+// Lê cookies e expõe estado básico de autenticação
 
 type AuthContextValue = {
   user: User | null;

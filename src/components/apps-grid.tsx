@@ -6,6 +6,7 @@ import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/providers/auth-provider";
 
+// Mescla apps padrão com apps do(s) grupo(s) e filtra pela busca
 type AppsGridProps = {
   query: string;
 };
@@ -15,7 +16,6 @@ export function AppsGrid({ query }: AppsGridProps) {
 
   const apps = useMemo(() => {
     const sector = getAppsForGroups(user?.groups);
-    // merge por id, priorizando apps de setor sobre padrão se repetir
     const byId = new Map<string, typeof defaultApps[number]>();
     for (const a of defaultApps) byId.set(a.id, a);
     for (const a of sector) byId.set(a.id, a);

@@ -45,7 +45,9 @@ export const defaultApps: AppLink[] = [
   }
 ];
 
-// Apps por grupo/setor (exemplos). 
+// Apps por grupo/setor (exemplos).
+// Pra testar em dev: /dev-login?groups=financeiro  | vários: /dev-login?groups=financeiro,rh
+// Pra sair: /dev-logout
 export const groupApps: Record<string, AppLink[]> = {
   financeiro: [
     {
